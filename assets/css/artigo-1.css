@@ -1,0 +1,146 @@
+.secao-picos{
+    display: none;
+}
+
+.imagem__artigo_mobile {
+    margin: 0 auto;
+}
+
+.imagem__artigo_desktop {
+    display: none;
+}
+
+.titulo-artigo{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 8px 0 30px 0;
+}
+
+.conteudo-artigo--perfil{
+    display: flex;
+    align-items: center;
+    line-height: 32px;
+    margin: 15px 15px; 
+    justify-content: space-between;
+    
+}
+
+.perfil__escritor::before{
+    content:"";
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/profile_2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 8px;  
+}
+
+.perfil__escritor {
+    justify-items: center;
+}
+
+
+.conteudo-artigo-texto{
+    font-size: 16px;
+    padding: 5px;
+    font-weight: 400;
+    line-height: 32px;
+    max-width: 90vw;
+}
+
+.imagem__artigo-mapa-mobile{
+    width: 93vw;
+    margin: 10px 0px;
+ }
+
+ .imagem__artigo-mapa-desktop {
+    display: none;
+ }
+
+ .imagem__artigo-interno{
+    width: 93vw;
+    margin: 10px 0px;
+ }
+
+ @media screen and (min-width: 1200px){
+
+    .principal-artigos{
+        margin: 24px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 32px;
+        grid-template-areas:
+            "imagem__artigo_desktop secao-picos"
+            "conteudo__artigo secao-picos"
+        ;
+        padding: 16px 30px;
+    }
+
+    .imagem__artigo_mobile {
+        display: none;
+    }
+    
+    .imagem__artigo_desktop {
+        display: block;
+        width: 55vw;
+        grid-area: imagem__artigo_desktop;
+    }
+
+    .secao-picos{
+        display: block;
+        grid-area: secao-picos;
+    }
+
+    .conteudo-artigo-texto, 
+    .imagem__artigo-interno, 
+    .imagem__artigo-mapa{
+
+        grid-area: conteudo__artigo;
+        
+    }
+
+    .titulo-secao-artigo {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .cartao-artigo {
+        margin-bottom: 15px;
+    }
+
+    .titulo-artigo {
+        font-size: 32px;
+    }
+
+    .conteudo-artigo--perfil{
+        justify-content: flex-start;
+    }
+
+    .perfil__escritor{
+        margin-right: 50px;
+    }
+
+    .imagem__artigo-mapa-mobile{
+        display: none;
+    }
+    
+    .imagem__artigo-mapa-desktop {
+        display: inline-block;
+        width: 100%;
+        grid-area: conteudo__artigo;
+    }
+
+    .imagem__artigo-interno-container {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .imagem__artigo-interno {
+        width: 48%;
+        grid-area: conteudo__artigo;
+    }
+
+}
